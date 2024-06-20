@@ -1,6 +1,6 @@
 #include "shader.hpp"
 
-Shader::Shader(const char* vertexFilename, const char* fragmentFilename)
+Shader::Shader(const char* vertexPath, const char* fragmentPath)
 {
     // 1. retrieve the vertex/fragment source code from filePath
     std::string vertexCode;
@@ -12,9 +12,6 @@ Shader::Shader(const char* vertexFilename, const char* fragmentFilename)
     fShaderFile.exceptions (std::ifstream::failbit | std::ifstream::badbit);
     try 
     {
-        // construct the file paths in shaders directory
-        std::filesystem::path vertexPath = std::filesystem::path(PROJ_ROOT) / "shaders" / vertexFilename;
-        std::filesystem::path fragmentPath = std::filesystem::path(PROJ_ROOT) / "shaders" / fragmentFilename;
         // open files
         vShaderFile.open(vertexPath);
         fShaderFile.open(fragmentPath);

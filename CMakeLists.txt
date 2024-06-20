@@ -17,7 +17,8 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 # Add source files
 add_executable(${PROJECT_NAME}
     src/main.cpp
-    src/shader.cpp)
+    src/shader.cpp
+    src/stb_image.cpp)
 
 # Add dependencies
 add_subdirectory(deps)
@@ -42,6 +43,3 @@ endif()
 if(APPLE)
     target_compile_options(${PROJECT_NAME} PRIVATE "-DGL_SILENCE_DEPRECATION")
 endif()
-
-# Add project root directory as preprocessor macro (to load shaders more cleanly)
-add_compile_definitions(PROJ_ROOT="${PROJECT_SOURCE_DIR}")

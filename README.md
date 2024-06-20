@@ -5,6 +5,7 @@ This is my repo for following along with great tutorials at [LearnOpenGL.com](ht
 To build, first clone the repository (or just download it from github)
 ```
 git clone https://github.com/alorans/LearnOpenGL.git
+cd LearnOpenGL
 ```
 And update the submodules
 ```
