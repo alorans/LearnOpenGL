@@ -26,6 +26,7 @@ add_subdirectory(deps)
 # Include directories for third-party libraries
 include_directories(deps/glfw/include)
 include_directories(deps/glad/include)
+include_directories(deps/glm)
 
 # Link GLFW and glad
 target_link_libraries(${PROJECT_NAME} PRIVATE glfw glad)
