@@ -1,5 +1,5 @@
 # LearnOpenGL
-This is my repo for following along with great tutorials at [LearnOpenGL.com](https://learnopengl.com), using GLFW and Glad. It also helps remind me how to set up a project with CMake...
+This is my repo for following along with great tutorials at [LearnOpenGL.com](https://learnopengl.com). It also helps remind me how to set up a project with CMake...
 
 ## Checkout
 To build, first clone the repository (or just download it from github)

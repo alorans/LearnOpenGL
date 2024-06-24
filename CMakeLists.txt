@@ -1,4 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
+if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_BINARY_DIR})
+  message(FATAL_ERROR "Prevented in-tree built. Please create a build directory outside of the source code and call cmake from there.")
+endif()
 project(learnGL VERSION 1.0 LANGUAGES CXX)
 
 # Set C++ standard
@@ -11,14 +14,14 @@ if(NOT OpenGL_FOUND)
     message(FATAL_ERROR "OpenGL not found on your system.")
 endif()
 
-# Set include search path
-include_directories(${PROJECT_SOURCE_DIR}/include)
-
 # Add source files
 add_executable(${PROJECT_NAME}
     src/main.cpp
     src/shader.cpp
     src/stb_image.cpp)
+
+# Set include search path
+target_include_directories(${PROJECT_NAME} PRIVATE ${PROJECT_SOURCE_DIR}/include)
 
 # Add dependencies
 add_subdirectory(deps)
