@@ -2,12 +2,12 @@
 This is my repo for following along with great tutorials at [LearnOpenGL.com](https://learnopengl.com). It also helps remind me how to set up a project with CMake...
 
 ## Checkout
-To build, first clone the repository (or just download it from github)
+To build, first clone the repository recursively, to get dependencies.
 ```
-git clone https://github.com/alorans/LearnOpenGL.git
+git clone --recursive https://github.com/alorans/LearnOpenGL.git
 cd LearnOpenGL
 ```
-And update the submodules
+If the repository wasn't cloned recursively, update the submodules using this command
 ```
 git submodule update --init --recursive
 ```

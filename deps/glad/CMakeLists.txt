@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.15)
-project(Glad)
+project(glad LANGUAGES C)
 
-add_library(glad src/glad.c)
-target_include_directories(glad PUBLIC include)
+# Create static library
+add_library(${PROJECT_NAME} STATIC glad/src/glad.c)
+target_include_directories(${PROJECT_NAME} PUBLIC glad/include)
